@@ -1,0 +1,22 @@
+version : "3.8"
+services :
+  postgres :
+    container_name : postgres_ecommerce
+    image : postgres
+    restart : always
+    environment :
+      POSTGRES_USER : AbidkafiElmi
+      POSTGRES_PASSWORD : 123
+      POSTGRES_DB : ecommerce
+    ports : 
+      - "5432:5432"
+
+  pgadmin :
+    container_name : pgAdmin_ecommerce
+    image : dpage/pgadmin4
+    restart : always
+    environment :
+      PGADMIN_DEFAULT_EMAIL : abdiakfielmi24@gmail.com
+      PGADMIN_DEFAULT_PASSWORD : 123
+    ports :
+      - "5055:80"
